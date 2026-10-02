@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // (function() {
 //     try {
 //         var saved = localStorage.getItem('theme');
@@ -79,7 +78,8 @@
 //     if (e.key === 'theme' && e.newValue) {
 //         root.setAttribute('data-theme', e.newValue);
 //     }
-=======
+===
+=== =
 // (function() {
 //     try {
 //         var saved = localStorage.getItem('theme');
@@ -160,5 +160,6 @@
 //     if (e.key === 'theme' && e.newValue) {
 //         root.setAttribute('data-theme', e.newValue);
 //     }
->>>>>>> d1581827dd6f29dbe2d8fa5dfbeb41ab38552460
+>>>
+>>> > d1581827dd6f29dbe2d8fa5dfbeb41ab38552460
 // });
