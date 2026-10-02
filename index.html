@@ -18,6 +18,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="script.js"></script>
+    //
     <script>
       (function () {
         try {
@@ -930,8 +931,8 @@
 
     <script>
       /* ---------------------------------------------------------
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               THEME TOGGLE
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            --------------------------------------------------------- */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       THEME TOGGLE
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    --------------------------------------------------------- */
       const themeToggle = document.getElementById("themeToggle");
       const root = document.documentElement;
 
@@ -947,8 +948,8 @@
       });
 
       /* ---------------------------------------------------------
-                                             MOBILE NAV TOGGLE
-                                          --------------------------------------------------------- */
+                                               MOBILE NAV TOGGLE
+                                            --------------------------------------------------------- */
       const navToggle = document.getElementById("navToggle");
       const navLinks = document.getElementById("navLinks");
 
@@ -965,8 +966,8 @@
       });
 
       /* ---------------------------------------------------------
-                                             NAVBAR SCROLL EFFECT
-                                          --------------------------------------------------------- */
+                                               NAVBAR SCROLL EFFECT
+                                            --------------------------------------------------------- */
       const navbar = document.getElementById("navbar");
       window.addEventListener("scroll", () => {
         if (window.scrollY > 20) navbar.classList.add("scrolled");
@@ -974,8 +975,8 @@
       });
 
       /* ---------------------------------------------------------
-                                             SCROLLSPY
-                                          --------------------------------------------------------- */
+                                               SCROLLSPY
+                                            --------------------------------------------------------- */
       const sections = document.querySelectorAll("section[id]");
       const links = document.querySelectorAll(".nav-link");
 
@@ -995,8 +996,8 @@
       });
 
       /* ---------------------------------------------------------
-                                             SYNC THEME ACROSS TABS (bonus)
-                                          --------------------------------------------------------- */
+                                               SYNC THEME ACROSS TABS (bonus)
+                                            --------------------------------------------------------- */
       window.addEventListener("storage", (e) => {
         if (e.key === "theme" && e.newValue) {
           root.setAttribute("data-theme", e.newValue);
@@ -1005,4 +1006,3 @@
     </script>
   </body>
 </html>
->>>>>>> d1581827dd6f29dbe2d8fa5dfbeb41ab38552460
