@@ -1,53 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <meta name="description" content="Frontend developer crafting bold, accessible, and pixel-perfect web experiences." />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <meta
+      name="description"
+      content="Frontend developer crafting bold, accessible, and pixel-perfect web experiences."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/dfb097c488.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/dfb097c488.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
     //
     <script>
-        (function() {
-            try {
-                var saved = localStorage.getItem("theme");
-                var prefersLight = window.matchMedia(
-                    "(prefers-color-scheme: light)"
-                ).matches;
-                var theme = saved || (prefersLight ? "light" : "dark");
-                document.documentElement.setAttribute("data-theme", theme);
-            } catch (e) {
-                document.documentElement.setAttribute("data-theme", "dark");
-            }
-        })();
+      (function () {
+        try {
+          var saved = localStorage.getItem("theme");
+          var prefersLight = window.matchMedia(
+            "(prefers-color-scheme: light)"
+          ).matches;
+          var theme = saved || (prefersLight ? "light" : "dark");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="grid-bg"></div>
 
     <!-- ===================== NAVBAR ===================== -->
     <nav class="navbar" id="navbar">
-        <div class="nav-inner">
-            <a href="#home" class="nav-logo">Ashy.</a>
+      <div class="nav-inner">
+        <a href="#home" class="nav-logo">Ashy.</a>
 
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
 
-            <div class="nav-right">
-                <a href="#contact" class="nav-cta">Hire Me</a>
+        <div class="nav-right">
+          <a href="#contact" class="nav-cta">Hire Me</a>
 
-                <!-- Theme toggle -->
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle light/dark mode">
+          <!-- Theme toggle -->
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle theme"
+            title="Toggle light/dark mode"
+          >
             <svg class="icon-moon" viewBox="0 0 24 24">
               <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
             </svg>
@@ -64,31 +77,37 @@
             </svg>
           </button>
 
-                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <button
+            class="nav-toggle"
+            id="navToggle"
+            aria-label="Toggle navigation"
+          >
             <span></span>
             <span></span>
             <span></span>
           </button>
-            </div>
         </div>
+      </div>
     </nav>
 
     <!-- ===================== HERO ===================== -->
     <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-inner">
-                <span class="hero-eyebrow">Available for work</span>
+      <div class="container">
+        <div class="hero-inner">
+          <span class="hero-eyebrow">Available for work</span>
 
-                <h1>
-                    Frontend developer building <span class="gradient">bold</span> & pixel-perfect interfaces.
-                </h1>
+          <h1>
+            Frontend developer building <span class="gradient">bold</span> &
+            pixel-perfect interfaces.
+          </h1>
 
-                <p>
-                    I design and build web experiences that are fast, accessible, and crafted with intent .
-                </p>
+          <p>
+            I design and build web experiences that are fast, accessible, and
+            crafted with intent .
+          </p>
 
-                <div class="hero-actions">
-                    <a href="#contact" class="btn btn-primary">
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">
               Get in Touch
               <svg
                 viewBox="0 0 24 24"
@@ -102,444 +121,564 @@
                 <path d="M13 6l6 6-6 6" />
               </svg>
             </a>
-                    <a href="#services" class="btn btn-secondary"> View Services </a>
-                </div>
+            <a href="#services" class="btn btn-secondary"> View Services </a>
+          </div>
 
-                <div class="scroll-hint">Scroll</div>
-            </div>
+          <div class="scroll-hint">Scroll</div>
         </div>
+      </div>
     </section>
 
     <!-- ===================== ABOUT ===================== -->
     <section id="about">
-        <div class="container">
-            <div class="about-card card">
-                <div class="photo-wrap">
-                    <img src="images/about me.jpg" alt="" />
-                    <span class="corner-br"></span>
-                    <span class="status">Available for work</span>
-                </div>
+      <div class="container">
+        <div class="about-card card">
+          <div class="photo-wrap">
+            <img src="images/about me.jpg" alt="" />
+            <span class="corner-br"></span>
+            <span class="status">Available for work</span>
+          </div>
 
-                <div class="about-content">
-                    <span class="eyebrow">About Me</span>
+          <div class="about-content">
+            <span class="eyebrow">About Me</span>
 
-                    <h2>
-                        Frontend developer building <span class="gradient">bold</span> & pixel-perfect interfaces.
-                    </h2>
+            <h2>
+              Frontend developer building <span class="gradient">bold</span> &
+              pixel-perfect interfaces.
+            </h2>
 
-                    <p class="bio">
-                        Based in Johannesburg , building web products that feel as good as they look. I work with
-                        <strong>JavaScript, React, TypeScript and modern CSS</strong> focused on speed, accessibility and the tiny motion details that make an interface feel alive. I don't just build - i ship. From concept to live URL.
-                    </p>
+            <p class="bio">
+              Based in Johannesburg , building web products that feel as good as
+              they look. I work with
+              <strong>JavaScript, React, TypeScript and modern CSS</strong>
+              focused on speed, accessibility and the tiny motion details that
+              make an interface feel alive. I don't just build - i ship. From
+              concept to live URL.
+            </p>
 
-                    <p class="bio">
-                        Beyond code, I care deeply about design systems, motion, and the craft of turning good ideas into shipped products.
-                    </p>
+            <p class="bio">
+              Beyond code, I care deeply about design systems, motion, and the
+              craft of turning good ideas into shipped products.
+            </p>
 
-                    <div class="tags">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">React</span>
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">Next.js</span>
-                        <span class="tag">Tailwind CSS</span>
-                    </div>
-
-                    <div class="about-actions">
-                        <a href="CV_2024-08-27-025328.pdf" download class="btn btn-primary">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16" />
-                </svg> Download CV
-                        </a>
-                        <a href="#contact" class="btn btn-secondary">Let's Talk</a>
-                    </div>
-                </div>
+            <div class="tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">React</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">Tailwind CSS</span>
             </div>
+
+            <div class="about-actions">
+              <a
+                href="Ashley_Mhembere_FlowCV_Resume_2026-10-06.pdf"
+                download
+                class="btn btn-primary"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16" />
+                </svg>
+                Download CV
+              </a>
+              <a href="#contact" class="btn btn-secondary">Let's Talk</a>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- ===================== SERVICES ===================== -->
     <section id="services">
-        <div class="container">
-            <div class="section-header">
-                <span class="eyebrow">What I Do</span>
-                <h2>
-                    Services built for <span class="gradient">modern</span> web products.
-                </h2>
-                <p class="section-sub">
-                    From concept to shipped product — I help teams and founders build fast, accessible, and beautifully crafted interfaces.
-                </p>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">What I Do</span>
+          <h2>
+            Services built for <span class="gradient">modern</span> web
+            products.
+          </h2>
+          <p class="section-sub">
+            From concept to shipped product — I help teams and founders build
+            fast, accessible, and beautifully crafted interfaces.
+          </p>
+        </div>
 
-            <div class="services-grid">
-                <article class="service-card card">
-                    <span class="badge">01</span>
-                    <div class="icon">
-                        <svg viewBox="0 0 24 24">
+        <div class="services-grid">
+          <article class="service-card card">
+            <span class="badge">01</span>
+            <div class="icon">
+              <svg viewBox="0 0 24 24">
                 <polyline points="16 18 22 12 16 6" />
                 <polyline points="8 6 2 12 8 18" />
               </svg>
-                    </div>
-                    <h3>Web Development</h3>
-                    <p>
-                        Production-ready frontends built with modern frameworks — fast, scalable, and maintainable.
-                    </p>
-                    <ul class="features">
-                        <li>React & Next.js</li>
-                        <li>JavaScript & TypeScript</li>
-                        <li>API integration</li>
-                    </ul>
-                </article>
+            </div>
+            <h3>Web Development</h3>
+            <p>
+              Production-ready frontends built with modern frameworks — fast,
+              scalable, and maintainable.
+            </p>
+            <ul class="features">
+              <li>React & Next.js</li>
+              <li>JavaScript & TypeScript</li>
+              <li>API integration</li>
+            </ul>
+          </article>
 
-                <article class="service-card card">
-                    <span class="badge">02</span>
-                    <div class="icon">
-                        <svg viewBox="0 0 24 24">
+          <article class="service-card card">
+            <span class="badge">02</span>
+            <div class="icon">
+              <svg viewBox="0 0 24 24">
                 <rect x="3" y="3" width="18" height="18" rx="2" />
                 <path d="M3 9h18" />
                 <path d="M9 21V9" />
               </svg>
-                    </div>
-                    <h3>UI Engineering</h3>
-                    <p>
-                        Pixel-perfect interfaces translated from design into clean, reusable component systems.
-                    </p>
-                    <ul class="features">
-                        <li>Design systems</li>
-                        <li>Component libraries</li>
-                        <li>Responsive layouts</li>
-                    </ul>
-                </article>
+            </div>
+            <h3>UI Engineering</h3>
+            <p>
+              Pixel-perfect interfaces translated from design into clean,
+              reusable component systems.
+            </p>
+            <ul class="features">
+              <li>Design systems</li>
+              <li>Component libraries</li>
+              <li>Responsive layouts</li>
+            </ul>
+          </article>
 
-                <article class="service-card card">
-                    <span class="badge">03</span>
-                    <div class="icon">
-                        <svg viewBox="0 0 24 24">
+          <article class="service-card card">
+            <span class="badge">03</span>
+            <div class="icon">
+              <svg viewBox="0 0 24 24">
                 <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
               </svg>
-                    </div>
-                    <h3>Performance</h3>
-                    <p>
-                        Audits and optimizations that make your site feel instant — from bundle size to render speed.
-                    </p>
-                    <ul class="features">
-                        <li>Core Web Vitals</li>
-                        <li>Bundle optimization</li>
-                        <li>Lazy loading</li>
-                    </ul>
-                </article>
+            </div>
+            <h3>Performance</h3>
+            <p>
+              Audits and optimizations that make your site feel instant — from
+              bundle size to render speed.
+            </p>
+            <ul class="features">
+              <li>Core Web Vitals</li>
+              <li>Bundle optimization</li>
+              <li>Lazy loading</li>
+            </ul>
+          </article>
 
-                <article class="service-card card">
-                    <span class="badge">04</span>
-                    <div class="icon">
-                        <svg viewBox="0 0 24 24">
+          <article class="service-card card">
+            <span class="badge">04</span>
+            <div class="icon">
+              <svg viewBox="0 0 24 24">
                 <circle cx="12" cy="12" r="9" />
                 <path d="M12 3a9 9 0 0 1 0 18" />
               </svg>
-                    </div>
-                    <h3>Motion & Interaction</h3>
-                    <p>
-                        Micro-interactions and animations that make products feel alive — subtle, purposeful, fast.
-                    </p>
-                    <ul class="features">
-                        <li>Framer Motion</li>
-                        <li>Scroll animations</li>
-                        <li>Micro-interactions</li>
-                    </ul>
-                </article>
+            </div>
+            <h3>Motion & Interaction</h3>
+            <p>
+              Micro-interactions and animations that make products feel alive —
+              subtle, purposeful, fast.
+            </p>
+            <ul class="features">
+              <li>Framer Motion</li>
+              <li>Scroll animations</li>
+              <li>Micro-interactions</li>
+            </ul>
+          </article>
 
-                <article class="service-card card">
-                    <span class="badge">05</span>
-                    <div class="icon">
-                        <svg viewBox="0 0 24 24">
+          <article class="service-card card">
+            <span class="badge">05</span>
+            <div class="icon">
+              <svg viewBox="0 0 24 24">
                 <circle cx="12" cy="5" r="2" />
                 <path d="M12 7v6" />
                 <path d="M6 10h12" />
                 <path d="M9 22l3-9 3 9" />
               </svg>
-                    </div>
-                    <h3>Accessibility</h3>
-                    <p>
-                        Inclusive interfaces that work for everyone — semantic markup, keyboard nav, and screen reader support.
-                    </p>
-                    <ul class="features">
-                        <li>WCAG compliance</li>
-                        <li>Semantic HTML</li>
-                        <li>Keyboard navigation</li>
-                    </ul>
-                </article>
+            </div>
+            <h3>Accessibility</h3>
+            <p>
+              Inclusive interfaces that work for everyone — semantic markup,
+              keyboard nav, and screen reader support.
+            </p>
+            <ul class="features">
+              <li>WCAG compliance</li>
+              <li>Semantic HTML</li>
+              <li>Keyboard navigation</li>
+            </ul>
+          </article>
 
-                <article class="service-card card">
-                    <span class="badge">06</span>
-                    <div class="icon">
-                        <svg viewBox="0 0 24 24">
+          <article class="service-card card">
+            <span class="badge">06</span>
+            <div class="icon">
+              <svg viewBox="0 0 24 24">
                 <path
                   d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
                 />
               </svg>
-                    </div>
-                    <h3>Consulting</h3>
-                    <p>
-                        Technical guidance for teams and founders — architecture, code reviews, and frontend strategy.
-                    </p>
-                    <ul class="features">
-                        <li>Code reviews</li>
-                        <li>Architecture advice</li>
-                        <li>Team mentoring</li>
-                    </ul>
-                </article>
             </div>
+            <h3>Consulting</h3>
+            <p>
+              Technical guidance for teams and founders — architecture, code
+              reviews, and frontend strategy.
+            </p>
+            <ul class="features">
+              <li>Code reviews</li>
+              <li>Architecture advice</li>
+              <li>Team mentoring</li>
+            </ul>
+          </article>
         </div>
+      </div>
     </section>
 
     <!--======================= MY PROJECTS============================ -->
 
     <section class="projects" id="projects">
-        <!-- Header -->
-        <div class="section-header">
-            <span class="eyebrow">Selected Work</span>
-            <h2>Projects I've <span class="gradient">built</span> & shipped.</h2>
-            <p class="section-sub">
-                A selection of recent projects — from design systems and dashboards to full-stack web apps.
+      <!-- Header -->
+      <div class="section-header">
+        <span class="eyebrow">Selected Work</span>
+        <h2>Projects I've <span class="gradient">built</span> & shipped.</h2>
+        <p class="section-sub">
+          A selection of recent projects — from design systems and dashboards to
+          full-stack web apps.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- 1 -->
+        <article class="project-card" data-category="web">
+          <div class="project-thumb">
+            <span class="featured-badge">Featured</span>
+            <img
+              src="https://imgs.search.brave.com/G6SrR8bvG2z1ey6kELNRa7VglUPfZ1i8a7me4choLe8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9yZXBv/c2l0b3J5LWltYWdl/cy5naXRodWJ1c2Vy/Y29udGVudC5jb20v/NTI1NjU5NTkzLzI0/MzhlYTFjLTBjNDAt/NGQ1OS04MzM0LTk3/OTgwY2IwNzcxNw"
+              alt=""
+            />
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-category">Web App</span>
+              <span class="project-year">2022</span>
+            </div>
+            <h3>Netflix-clone App</h3>
+            <p>
+              A web application that replicates the user interface and core
+              features of Netflix.
             </p>
-        </div>
-
-        <div class="projects-grid">
-            <!-- 1 -->
-            <article class="project-card" data-category="web">
-                <div class="project-thumb">
-                    <span class="featured-badge">Featured</span>
-                    <img src="https://imgs.search.brave.com/G6SrR8bvG2z1ey6kELNRa7VglUPfZ1i8a7me4choLe8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9yZXBv/c2l0b3J5LWltYWdl/cy5naXRodWJ1c2Vy/Y29udGVudC5jb20v/NTI1NjU5NTkzLzI0/MzhlYTFjLTBjNDAt/NGQ1OS04MzM0LTk3/OTgwY2IwNzcxNw" alt="" />
-                </div>
-                <div class="project-body">
-                    <div class="project-meta">
-                        <span class="project-category">Web App</span>
-                        <span class="project-year">2022</span>
-                    </div>
-                    <h3>Netflix-clone App</h3>
-                    <p>A web application that replicates the user interface and core features of Netflix.</p>
-                    <div class="project-tags">
-                        <span class="project-tag">React</span>
-                        <span class="project-tag">API</span>
-                        <span class="project-tag">CSS</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://github.com/marufu2019/Netflix-Clone-App" target="_blank" class="project-btn code">
-                            <svg viewBox="0 0 24 24">
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">API</span>
+              <span class="project-tag">CSS</span>
+            </div>
+            <div class="project-actions">
+              <a
+                href="https://github.com/marufu2019/Netflix-Clone-App"
+                target="_blank"
+                class="project-btn code"
+              >
+                <svg viewBox="0 0 24 24">
                   <polyline points="16 18 22 12 16 6" />
                   <polyline points="8 6 2 12 8 18" />
-                </svg> Code
-                        </a>
-                        <a href="https://netflix-clone-delta-jade.vercel.app/" target="_blank" class="project-btn demo">
-                            <svg viewBox="0 0 24 24">
+                </svg>
+                Code
+              </a>
+              <a
+                href="https://netflix-clone-delta-jade.vercel.app/"
+                target="_blank"
+                class="project-btn demo"
+              >
+                <svg viewBox="0 0 24 24">
                   <path
                     d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
                   />
                   <path d="M15 3h6v6" />
                   <path d="M10 14L21 3" />
-                </svg> Live Demo
-                        </a>
-                    </div>
-                </div>
-            </article>
+                </svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </article>
 
-            <!-- 2 -->
-            <article class="project-card" data-category="ui">
-                <div class="project-thumb">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR33QEpJnQzU_JuC1OmW5YeYt4i4jYTIr_vCk6mu1SbAw&s=10" alt="" />
-                </div>
-                <div class="project-body">
-                    <div class="project-meta">
-                        <span class="project-category">UI / Design System</span>
-                        <span class="project-year">2024</span>
-                    </div>
-                    <h3>Prescripto - Online Doctor's Appointment</h3>
-                    <p>
-                        "Quality healthcare, on your schedule. Book a virtual appointment now. <br /> Instant access to doctors. Book online, feel better faster. "
-                    </p>
-                    <div class="project-tags">
-                        <span class="project-tag">React</span>
-                        <span class="project-tag">Tailwind CSS</span>
-                        <span class="project-tag">Firebase</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://github.com/marufu2019/Doctor-s-Appointment" target="_blank" class="project-btn code">
-                            <svg viewBox="0 0 24 24">
+        <!-- 2 -->
+        <article class="project-card" data-category="ui">
+          <div class="project-thumb">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR33QEpJnQzU_JuC1OmW5YeYt4i4jYTIr_vCk6mu1SbAw&s=10"
+              alt=""
+            />
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-category">UI / Design System</span>
+              <span class="project-year">2024</span>
+            </div>
+            <h3>Prescripto - Online Doctor's Appointment</h3>
+            <p>
+              "Quality healthcare, on your schedule. Book a virtual appointment
+              now. <br />
+              Instant access to doctors. Book online, feel better faster. "
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Tailwind CSS</span>
+              <span class="project-tag">Firebase</span>
+            </div>
+            <div class="project-actions">
+              <a
+                href="https://github.com/marufu2019/Doctor-s-Appointment"
+                target="_blank"
+                class="project-btn code"
+              >
+                <svg viewBox="0 0 24 24">
                   <polyline points="16 18 22 12 16 6" />
                   <polyline points="8 6 2 12 8 18" />
-                </svg> Code
-                        </a>
-                        <a href="https://doctor-appointments-lovat.vercel.app" target="_blank" class="project-btn demo">
-                            <svg viewBox="0 0 24 24">
+                </svg>
+                Code
+              </a>
+              <a
+                href="https://doctor-appointments-lovat.vercel.app"
+                target="_blank"
+                class="project-btn demo"
+              >
+                <svg viewBox="0 0 24 24">
                   <path
                     d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
                   />
                   <path d="M15 3h6v6" />
                   <path d="M10 14L21 3" />
-                </svg> Live Demo
-                        </a>
-                    </div>
-                </div>
-            </article>
+                </svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </article>
 
-            <!-- 3 -->
-            <article class="project-card" data-category="web">
-                <div class="project-thumb">
-                    <img src="https://media.gettyimages.com/id/831659482/photo/he-is-after-a-new-pink-shirt.jpg?s=612x612&w=0&k=20&c=tlB-HwpvcrOkizzd2npHPIWaJFDw8o_LH65dLGuQ7tY=" alt="E-commerce project" />
-                </div>
-                <div class="project-body">
-                    <div class="project-meta">
-                        <span class="project-category">Web App</span>
-                        <span class="project-year">2023</span>
-                    </div>
-                    <h3>Halo Storefront</h3>
-                    <p>
-                        A headless e-commerce storefront with edge caching, instant search, and a 98 Lighthouse performance score.
-                    </p>
-                    <div class="project-tags">
-                        <span class="project-tag">Vanilla JavaScript</span>
-                        <span class="project-tag">HTML5</span>
-                        <span class="project-tag">Modern CSS</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://github.com/marufu2019/E-commerce-App" target="_blank" class="project-btn code">
-                            <svg viewBox="0 0 24 24">
+        <!-- 3 -->
+        <article class="project-card" data-category="web">
+          <div class="project-thumb">
+            <img
+              src="https://media.gettyimages.com/id/831659482/photo/he-is-after-a-new-pink-shirt.jpg?s=612x612&w=0&k=20&c=tlB-HwpvcrOkizzd2npHPIWaJFDw8o_LH65dLGuQ7tY="
+              alt="E-commerce project"
+            />
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-category">Web App</span>
+              <span class="project-year">2023</span>
+            </div>
+            <h3>Halo Storefront</h3>
+            <p>
+              A headless e-commerce storefront with edge caching, instant
+              search, and a 98 Lighthouse performance score.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">Vanilla JavaScript</span>
+              <span class="project-tag">HTML5</span>
+              <span class="project-tag">Modern CSS</span>
+            </div>
+            <div class="project-actions">
+              <a
+                href="https://github.com/marufu2019/E-commerce-App"
+                target="_blank"
+                class="project-btn code"
+              >
+                <svg viewBox="0 0 24 24">
                   <polyline points="16 18 22 12 16 6" />
                   <polyline points="8 6 2 12 8 18" />
-                </svg> Code
-                        </a>
-                        <a href="https://e-commerce-app-alpha-jade.vercel.app/" target="_blank" class="project-btn demo">
-                            <svg viewBox="0 0 24 24">
+                </svg>
+                Code
+              </a>
+              <a
+                href="https://e-commerce-app-alpha-jade.vercel.app/"
+                target="_blank"
+                class="project-btn demo"
+              >
+                <svg viewBox="0 0 24 24">
                   <path
                     d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
                   />
                   <path d="M15 3h6v6" />
                   <path d="M10 14L21 3" />
-                </svg> Live Demo
-                        </a>
-                    </div>
-                </div>
-            </article>
+                </svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </article>
 
-            <!-- 4 -->
-            <article class="project-card" data-category="mobile">
-                <div class="project-thumb">
-                    <img src="https://img.freepik.com/premium-photo/variety-fruits-vegetables-including-broccoli-grapes-oranges_997657-36231.jpg?semt=ais_hybrid&w=740&q=80" alt="" height="300px" alt="Mobile app project" />
-                </div>
-                <div class="project-body">
-                    <div class="project-meta">
-                        <span class="project-category">Mobile</span>
-                        <span class="project-year">2024</span>
-                    </div>
-                    <h3>Fruits Food App</h3>
-                    <p>
-                        Discover the joy of healthy eating, your all-in-one destination for fresh, natural, and nutritious fruits. Browse seasonal picks, learn about their health benefits, and order your favorites — all from the comfort of your home.
-                    </p>
-                    <div class="project-tags">
-                        <span class="project-tag"> Vanilla JavaScript</span>
-                        <span class="project-tag">HTML5/CSS</span>
-                        <span class="project-tag">Open Source</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://github.com/marufu2019/Fruits-app" target="_blank" class="project-btn code">
-                            <svg viewBox="0 0 24 24">
+        <!-- 4 -->
+        <article class="project-card" data-category="mobile">
+          <div class="project-thumb">
+            <img
+              src="https://img.freepik.com/premium-photo/variety-fruits-vegetables-including-broccoli-grapes-oranges_997657-36231.jpg?semt=ais_hybrid&w=740&q=80"
+              alt=""
+              height="300px"
+              alt="Mobile app project"
+            />
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-category">Mobile</span>
+              <span class="project-year">2024</span>
+            </div>
+            <h3>Fruits Food App</h3>
+            <p>
+              Discover the joy of healthy eating, your all-in-one destination
+              for fresh, natural, and nutritious fruits. Browse seasonal picks,
+              learn about their health benefits, and order your favorites — all
+              from the comfort of your home.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag"> Vanilla JavaScript</span>
+              <span class="project-tag">HTML5/CSS</span>
+              <span class="project-tag">Open Source</span>
+            </div>
+            <div class="project-actions">
+              <a
+                href="https://github.com/marufu2019/Fruits-app"
+                target="_blank"
+                class="project-btn code"
+              >
+                <svg viewBox="0 0 24 24">
                   <polyline points="16 18 22 12 16 6" />
                   <polyline points="8 6 2 12 8 18" />
-                </svg> Code
-                        </a>
-                        <a href="https://marufu2019.github.io/Fruits-app/" target="_blank" class="project-btn demo">
-                            <svg viewBox="0 0 24 24">
+                </svg>
+                Code
+              </a>
+              <a
+                href="https://marufu2019.github.io/Fruits-app/"
+                target="_blank"
+                class="project-btn demo"
+              >
+                <svg viewBox="0 0 24 24">
                   <path
                     d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
                   />
                   <path d="M15 3h6v6" />
                   <path d="M10 14L21 3" />
-                </svg> Live Demo
-                        </a>
-                    </div>
-                </div>
-            </article>
+                </svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </article>
 
-            <!-- 5 -->
-            <article class="project-card" data-category="web ui">
-                <div class="project-thumb">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmNwXSTQ7tl95FvegJTuX25nAvBnSZwGBkAE2jmGEeTw&s=10" alt="" />
-                </div>
-                <div class="project-body">
-                    <div class="project-meta">
-                        <span class="project-category">Web App</span>
-                        <span class="project-year">2022</span>
-                    </div>
-                    <h3>YouTube App Clone - VidTube</h3>
-                    <p>
-                        A web application built to replicate the video-sharing features, playback interfaces, and design layout of the official YouTube platform.
-                    </p>
-                    <div class="project-tags">
-                        <span class="project-tag">React</span>
-                        <span class="project-tag">API</span>
-                        <span class="project-tag">Modern CSS</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://github.com/marufu2019/Youtube-clone" target="_blank" class="project-btn code">
-                            <svg viewBox="0 0 24 24">
+        <!-- 5 -->
+        <article class="project-card" data-category="web ui">
+          <div class="project-thumb">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmNwXSTQ7tl95FvegJTuX25nAvBnSZwGBkAE2jmGEeTw&s=10"
+              alt=""
+            />
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-category">Web App</span>
+              <span class="project-year">2022</span>
+            </div>
+            <h3>YouTube App Clone - VidTube</h3>
+            <p>
+              A web application built to replicate the video-sharing features,
+              playback interfaces, and design layout of the official YouTube
+              platform.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">API</span>
+              <span class="project-tag">Modern CSS</span>
+            </div>
+            <div class="project-actions">
+              <a
+                href="https://github.com/marufu2019/Youtube-clone"
+                target="_blank"
+                class="project-btn code"
+              >
+                <svg viewBox="0 0 24 24">
                   <polyline points="16 18 22 12 16 6" />
                   <polyline points="8 6 2 12 8 18" />
-                </svg> Code
-                        </a>
-                        <a href="https://youtube-clone-sepia-theta-12.vercel.app/" target="_blank" class="project-btn demo">
-                            <svg viewBox="0 0 24 24">
+                </svg>
+                Code
+              </a>
+              <a
+                href="https://youtube-clone-sepia-theta-12.vercel.app/"
+                target="_blank"
+                class="project-btn demo"
+              >
+                <svg viewBox="0 0 24 24">
                   <path
                     d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
                   />
                   <path d="M15 3h6v6" />
                   <path d="M10 14L21 3" />
-                </svg> Live Demo
-                        </a>
-                    </div>
-                </div>
-            </article>
+                </svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </article>
 
-            <!-- 6 -->
-            <article class="project-card" data-category="ui">
-                <div class="project-thumb">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXOGLs6IvaEUtLW--I_UQR6Dlkox67lNV_M_7Da1Pf8Q&s=10" alt="" />
-                </div>
-                <div class="project-body">
-                    <div class="project-meta">
-                        <span class="project-category">Web Design</span>
-                        <span class="project-year">2022</span>
-                    </div>
-                    <h3>Order Food Online</h3>
-                    <p>
-                        Wide variety of fancy gourmet food, high-end frozen meals, handcrafted platters, and artisan ingredients online for home delivery.
-                    </p>
-                    <div class="project-tags">
-                        <span class="project-tag">React</span>
-                        <span class="project-tag">JSX/CSS</span>
-                        <span class="project-tag">Open Source</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="https://github.com/marufu2019/Food-APP" target="_blank" class="project-btn code">
-                            <svg viewBox="0 0 24 24">
+        <!-- 6 -->
+        <article class="project-card" data-category="ui">
+          <div class="project-thumb">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXOGLs6IvaEUtLW--I_UQR6Dlkox67lNV_M_7Da1Pf8Q&s=10"
+              alt=""
+            />
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-category">Web Design</span>
+              <span class="project-year">2022</span>
+            </div>
+            <h3>Order Food Online</h3>
+            <p>
+              Wide variety of fancy gourmet food, high-end frozen meals,
+              handcrafted platters, and artisan ingredients online for home
+              delivery.
+            </p>
+            <div class="project-tags">
+              <span class="project-tag">React</span>
+              <span class="project-tag">JSX/CSS</span>
+              <span class="project-tag">Open Source</span>
+            </div>
+            <div class="project-actions">
+              <a
+                href="https://github.com/marufu2019/Food-APP"
+                target="_blank"
+                class="project-btn code"
+              >
+                <svg viewBox="0 0 24 24">
                   <polyline points="16 18 22 12 16 6" />
                   <polyline points="8 6 2 12 8 18" />
-                </svg> Code
-                        </a>
-                        <a href="https://food-app-xi-gilt.vercel.app/" target="_blank" class="project-btn demo">
-                            <svg viewBox="0 0 24 24">
+                </svg>
+                Code
+              </a>
+              <a
+                href="https://food-app-xi-gilt.vercel.app/"
+                target="_blank"
+                class="project-btn demo"
+              >
+                <svg viewBox="0 0 24 24">
                   <path
                     d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
                   />
                   <path d="M15 3h6v6" />
                   <path d="M10 14L21 3" />
-                </svg> Live Demo
-                        </a>
-                    </div>
-                </div>
-            </article>
-        </div>
+                </svg>
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
 
-        <!-- View all -->
-        <!-- <div class="projects-footer">
+      <!-- View all -->
+      <!-- <div class="projects-footer">
         <a href="#" class="btn-all">
           View All Projects
           <svg
@@ -559,82 +698,94 @@
 
     <!-- ===================== CONTACT ===================== -->
     <section id="contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="eyebrow">Get in Touch</span>
-                <h2>Let's build something <span class="gradient">together</span>.</h2>
-                <p class="section-sub">
-                    Have a project in mind, need a hand on your frontend, or just want to say hi? My inbox is always open.
-                </p>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Get in Touch</span>
+          <h2>Let's build something <span class="gradient">together</span>.</h2>
+          <p class="section-sub">
+            Have a project in mind, need a hand on your frontend, or just want
+            to say hi? My inbox is always open.
+          </p>
+        </div>
 
-            <div class="contact-wrap">
-                <aside class="contact-info card">
-                    <h3>Contact Information</h3>
-                    <p>
-                        Prefer email or a quick call? Reach me directly through any of the channels below.
-                    </p>
+        <div class="contact-wrap">
+          <aside class="contact-info card">
+            <h3>Contact Information</h3>
+            <p>
+              Prefer email or a quick call? Reach me directly through any of the
+              channels below.
+            </p>
 
-                    <div class="info-list">
-                        <a href="mailto:hello@yourdomain.com" class="info-item">
-                            <span class="info-icon">
+            <div class="info-list">
+              <a href="mailto:hello@yourdomain.com" class="info-item">
+                <span class="info-icon">
                   <svg viewBox="0 0 24 24">
                     <rect x="3" y="5" width="18" height="14" rx="2" />
                     <path d="M3 7l9 6 9-6" />
                   </svg>
                 </span>
-                            <span class="info-text">
+                <span class="info-text">
                   <span class="info-label">Email</span>
-                            <span class="info-value">chakamhembere99@gmail.com</span>
-                            </span>
-                        </a>
+                  <span class="info-value">chakamhembere99@gmail.com</span>
+                </span>
+              </a>
 
-                        <a href="tel:+1234567890" class="info-item">
-                            <span class="info-icon">
+              <a href="tel:+1234567890" class="info-item">
+                <span class="info-icon">
                   <svg viewBox="0 0 24 24">
                     <path
                       d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7 12.8 12.8 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5 12.8 12.8 0 0 0 2.8.7 2 2 0 0 1 1.7 2z"
                     />
                   </svg>
                 </span>
-                            <span class="info-text">
+                <span class="info-text">
                   <span class="info-label">Phone</span>
-                            <span class="info-value">+27 785288628</span>
-                            </span>
-                        </a>
+                  <span class="info-value">+27 785288628</span>
+                </span>
+              </a>
 
-                        <a href="#" class="info-item">
-                            <span class="info-icon">
+              <a href="#" class="info-item">
+                <span class="info-icon">
                   <svg viewBox="0 0 24 24">
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                     <circle cx="12" cy="10" r="3" />
                   </svg>
                 </span>
-                            <span class="info-text">
+                <span class="info-text">
                   <span class="info-label">Location</span>
-                            <span class="info-value">Johannesburg, South Africa</span>
-                            </span>
-                        </a>
-                    </div>
+                  <span class="info-value">Johannesburg, South Africa</span>
+                </span>
+              </a>
+            </div>
 
-                    <div class="socials">
-                        <a href="https://github.com/" target="_blank" class="social" aria-label="GitHub">
-                            <svg viewBox="0 0 24 24">
+            <div class="socials">
+              <a
+                href="https://github.com/"
+                target="_blank"
+                class="social"
+                aria-label="GitHub"
+              >
+                <svg viewBox="0 0 24 24">
                   <path
                     d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-1-2.6c3.1-.3 6.4-1.5 6.4-7A5.4 5.4 0 0 0 20 4.8 5 5 0 0 0 19.9 1S18.7.6 16 2.5a13.4 13.4 0 0 0-7 0C6.3.6 5.1 1 5.1 1A5 5 0 0 0 5 4.8 5.4 5.4 0 0 0 3.6 8.5c0 5.5 3.3 6.7 6.4 7A3.4 3.4 0 0 0 9 18.1V22"
                   />
                 </svg>
-                        </a>
-                        <a href="https://www.linkedin.com/in/ashley-mhembere-59a275210/?isSelfProfile=true" target="_blank" class="social" aria-label="LinkedIn">
-                            <svg viewBox="0 0 24 24">
+              </a>
+              <a
+                href="https://www.linkedin.com/in/ashley-mhembere-59a275210/?isSelfProfile=true"
+                target="_blank"
+                class="social"
+                aria-label="LinkedIn"
+              >
+                <svg viewBox="0 0 24 24">
                   <path
                     d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"
                   />
                   <rect x="2" y="9" width="4" height="12" />
                   <circle cx="4" cy="4" r="2" />
                 </svg>
-                        </a>
-                        <!-- <a href="#" class="social" aria-label="Twitter / X">
+              </a>
+              <!-- <a href="#" class="social" aria-label="Twitter / X">
                 <svg viewBox="0 0 24 24">
                   <path d="M4 4l16 16" />
                   <path d="M20 4L4 20" />
@@ -648,33 +799,61 @@
                   <path d="M3.3 15.7c6-2 12-1.2 17.4 2" />
                 </svg>
               </a> -->
-                    </div>
-                </aside>
+            </div>
+          </aside>
 
-                <form action="https://api.web3forms.com/submit" method="POST" class="contact-form card">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input id="name" name="name" type="text" placeholder="Your name" required />
-                            <input type="hidden" name="access_key" value="17945a6d-90dc-4993-920e-6569ee02e922" />
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input id="email" name="email" type="email" placeholder="you@example.com" required />
-                        </div>
-                    </div>
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            class="contact-form card"
+          >
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  placeholder="Your name"
+                  required
+                />
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="17945a6d-90dc-4993-920e-6569ee02e922"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="you@example.com"
+                  required
+                />
+              </div>
+            </div>
 
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input id="subject" type="text" placeholder="What's this about?" />
-                    </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input
+                id="subject"
+                type="text"
+                placeholder="What's this about?"
+              />
+            </div>
 
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" placeholder="Tell me about your project..." required></textarea>
-                    </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                placeholder="Tell me about your project..."
+                required
+              ></textarea>
+            </div>
 
-                    <button type="submit" class="btn btn-primary">
+            <button type="submit" class="btn btn-primary">
               Send Message
               <svg
                 viewBox="0 0 24 24"
@@ -688,142 +867,142 @@
                 <path d="M13 6l6 6-6 6" />
               </svg>
             </button>
-                </form>
-            </div>
+          </form>
         </div>
+      </div>
     </section>
 
     <!-- ===================== FOOTER ===================== -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-inner">
-                <div class="footer-brand">
-                    <h3>Ashy.</h3>
-                    <p>
-                        Frontend developer crafting bold, accessible, and pixel-perfect web experiences.
-                    </p>
-                </div>
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <h3>Ashy.</h3>
+            <p>
+              Frontend developer crafting bold, accessible, and pixel-perfect
+              web experiences.
+            </p>
+          </div>
 
-                <div class="footer-col">
-                    <h5>Navigate</h5>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
+          <div class="footer-col">
+            <h5>Navigate</h5>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
 
-                <div class="footer-col">
-                    <h5>Services</h5>
-                    <ul>
-                        <li><a href="#services">Web Development</a></li>
-                        <li><a href="#services">UI Engineering</a></li>
-                        <li><a href="#services">Performance</a></li>
-                        <li><a href="#services">Consulting</a></li>
-                    </ul>
-                </div>
+          <div class="footer-col">
+            <h5>Services</h5>
+            <ul>
+              <li><a href="#services">Web Development</a></li>
+              <li><a href="#services">UI Engineering</a></li>
+              <li><a href="#services">Performance</a></li>
+              <li><a href="#services">Consulting</a></li>
+            </ul>
+          </div>
 
-                <div class="footer-col">
-                    <h5>Connect</h5>
-                    <ul>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">Twitter / X</a></li>
-                        <li><a href="#">Dribbble</a></li>
-                    </ul>
-                </div>
-            </div>
+          <div class="footer-col">
+            <h5>Connect</h5>
+            <ul>
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">LinkedIn</a></li>
+              <li><a href="#">Twitter / X</a></li>
+              <li><a href="#">Dribbble</a></li>
+            </ul>
+          </div>
+        </div>
 
-            <div class="footer-bottom">
-                <p>© 2021 @shy<span class="dot"></span>All rights reserved.</p>
-                <a href="#home" class="back-top">
+        <div class="footer-bottom">
+          <p>© 2021 @shy<span class="dot"></span>All rights reserved.</p>
+          <a href="#home" class="back-top">
             Back to top
             <svg viewBox="0 0 24 24">
               <path d="M12 19V5" />
               <path d="M5 12l7-7 7 7" />
             </svg>
           </a>
-            </div>
         </div>
+      </div>
     </footer>
 
     <script>
-        /* ---------------------------------------------------------
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               THEME TOGGLE
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            --------------------------------------------------------- */
-        const themeToggle = document.getElementById("themeToggle");
-        const root = document.documentElement;
+      /* ---------------------------------------------------------
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       THEME TOGGLE
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    --------------------------------------------------------- */
+      const themeToggle = document.getElementById("themeToggle");
+      const root = document.documentElement;
 
-        themeToggle.addEventListener("click", () => {
-            const current = root.getAttribute("data-theme");
-            const next = current === "light" ? "dark" : "light";
-            root.setAttribute("data-theme", next);
-            try {
-                localStorage.setItem("theme", next);
-            } catch (e) {
-                // localStorage may be blocked — fail silently
-            }
-        });
+      themeToggle.addEventListener("click", () => {
+        const current = root.getAttribute("data-theme");
+        const next = current === "light" ? "dark" : "light";
+        root.setAttribute("data-theme", next);
+        try {
+          localStorage.setItem("theme", next);
+        } catch (e) {
+          // localStorage may be blocked — fail silently
+        }
+      });
 
-        /* ---------------------------------------------------------
+      /* ---------------------------------------------------------
                                                    MOBILE NAV TOGGLE
                                                 --------------------------------------------------------- */
-        const navToggle = document.getElementById("navToggle");
-        const navLinks = document.getElementById("navLinks");
+      const navToggle = document.getElementById("navToggle");
+      const navLinks = document.getElementById("navLinks");
 
-        navToggle.addEventListener("click", () => {
-            navToggle.classList.toggle("open");
-            navLinks.classList.toggle("open");
+      navToggle.addEventListener("click", () => {
+        navToggle.classList.toggle("open");
+        navLinks.classList.toggle("open");
+      });
+
+      document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", () => {
+          navToggle.classList.remove("open");
+          navLinks.classList.remove("open");
         });
+      });
 
-        document.querySelectorAll(".nav-link").forEach((link) => {
-            link.addEventListener("click", () => {
-                navToggle.classList.remove("open");
-                navLinks.classList.remove("open");
-            });
-        });
-
-        /* ---------------------------------------------------------
+      /* ---------------------------------------------------------
                                                    NAVBAR SCROLL EFFECT
                                                 --------------------------------------------------------- */
-        const navbar = document.getElementById("navbar");
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 20) navbar.classList.add("scrolled");
-            else navbar.classList.remove("scrolled");
-        });
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 20) navbar.classList.add("scrolled");
+        else navbar.classList.remove("scrolled");
+      });
 
-        /* ---------------------------------------------------------
+      /* ---------------------------------------------------------
                                                    SCROLLSPY
                                                 --------------------------------------------------------- */
-        const sections = document.querySelectorAll("section[id]");
-        const links = document.querySelectorAll(".nav-link");
+      const sections = document.querySelectorAll("section[id]");
+      const links = document.querySelectorAll(".nav-link");
 
-        window.addEventListener("scroll", () => {
-            let current = "";
-            sections.forEach((section) => {
-                const top = section.offsetTop - 120;
-                if (window.scrollY >= top) current = section.id;
-            });
-
-            links.forEach((link) => {
-                link.classList.remove("active");
-                if (link.getAttribute("href") === "#" + current) {
-                    link.classList.add("active");
-                }
-            });
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((section) => {
+          const top = section.offsetTop - 120;
+          if (window.scrollY >= top) current = section.id;
         });
 
-        /* ---------------------------------------------------------
+        links.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+          }
+        });
+      });
+
+      /* ---------------------------------------------------------
                                                    SYNC THEME ACROSS TABS (bonus)
                                                 --------------------------------------------------------- */
-        window.addEventListener("storage", (e) => {
-            if (e.key === "theme" && e.newValue) {
-                root.setAttribute("data-theme", e.newValue);
-            }
-        });
+      window.addEventListener("storage", (e) => {
+        if (e.key === "theme" && e.newValue) {
+          root.setAttribute("data-theme", e.newValue);
+        }
+      });
     </script>
-</body>
-
+  </body>
 </html>
